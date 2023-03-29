@@ -31,7 +31,7 @@ class _MessageForDetailProductState extends State<MessageForDetailProduct> {
           padding: const EdgeInsets.only(top: 20),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: !(widget.message.from == 'nicode@jabjab.de/gajim.LOR66809') ? MainAxisAlignment.end : MainAxisAlignment.start,
+            mainAxisAlignment: !(widget.message.from!.split('/').first == 'nicode@jabjab.de') ? MainAxisAlignment.end : MainAxisAlignment.start,
             children: [
               TextMessageForDetailProduct(message: widget.message),
             ],

@@ -813,7 +813,7 @@ class _AppStateState extends State<AppState> with WidgetsBindingObserver impleme
                       "nicode@jabjab.de",
                       value, 
                       "$id", 
-                      'imagen',
+                      value.split('.').last == 'jpg' ? 'imagen' : '',
                       DateTime.now().millisecondsSinceEpoch
                     );
 

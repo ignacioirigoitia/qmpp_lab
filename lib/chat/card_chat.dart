@@ -77,7 +77,13 @@ class _CardChatState extends State<CardChat> {
                       );
                     }
     
-                    return MessageForDetailProduct( message: widget.messages[index] );
+                    return (widget.messages[index].customText == 'imagen')
+                      ? Container(
+                          width: 200,
+                          height: 150,
+                          child: Image.network(widget.messages[index].body!, fit: BoxFit.cover,),
+                        )
+                      : MessageForDetailProduct( message: widget.messages[index] );
                   }
                 )
               ),

@@ -17,7 +17,7 @@ class TextMessageForDetailProduct extends StatelessWidget {
 
     bool isMyMessage;
 
-    if (message.from == 'nicode@jabjab.de/gajim.LOR66809') {
+    if (message.from!.split('/').first == 'nicode@jabjab.de') {
       isMyMessage = false;
     } else {
       isMyMessage = true;
